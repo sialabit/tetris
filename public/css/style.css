@@ -1,0 +1,128 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #598da4;
+}
+
+h1 {
+  color: #fff;
+}
+
+#title {
+  font-size: 50px;
+  color: #222433;
+}
+
+#app {
+  display: flex;
+  width: 100%;
+}
+
+#stage {
+  width: 300px;
+  height: 600px;
+  min-width: 300px;
+  min-height: 600px;
+}
+
+#stage .front-cover {
+  position: absolute;
+  width: 300px;
+  height: 600px;
+  background-color: white;
+  opacity: 0.6;
+  z-index: 300;
+}
+
+#stage table {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-collapse: collapse;
+}
+
+#stage table td {
+  color: white;
+  background-color: #222433;
+}
+
+#stage table td[data-color='cyan'] {
+  background-color: #00bcd4;
+}
+
+#stage table td[data-color='yellow'] {
+  background-color: #ffeb3b;
+}
+
+#stage table td[data-color='purple'] {
+  background-color: #9c27B0;
+}
+
+#stage table td[data-color='green'] {
+  background-color: #4caf50;
+}
+
+#stage table td[data-color='red'] {
+  background-color: #f44336;
+}
+
+#stage table td[data-color='blue'] {
+  background-color: #2196f3;
+}
+
+#stage table td[data-color='orange'] {
+  background-color: #ff9800;
+}
+
+#side-wrapper {
+  display: block;
+  flex-grow: 2;
+  max-width: 600px;
+}
+
+#side-wrapper .box {
+  padding: 20px;
+  width: 200px;
+  height: 170px;
+  min-width: 200px;
+  height: 170px;
+  border-radius: 15%;
+  background-color: #222433;
+}
+
+#side-wrapper .box .title {
+  color: white;
+  font-size: 24px;
+  line-height: 10px;
+  text-align: justify;
+  background-color: #990000;
+}
+
+#side-wrapper .box .content {
+  margin-top: 20px;
+  flex-grow: 2;
+  color: white;
+}
+
+#side-wrapper .upper {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#side-wrapper .upper .now-point .content {
+  margin-top: 37px;
+  font-size: 50px;
+  text-align: center;
+}
+
+#side-wrapper .lower {
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+table, th, td {
+  border: 1px solid #346f9f;
+}

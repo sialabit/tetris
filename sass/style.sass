@@ -1,0 +1,108 @@
+$base-color: #222433
+$sub-color1: #346f9f
+$sub-color2: #b0aaae
+$sub-color3: #436775
+$sub-color4: #598da4
+
+
+body
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  background-color: $sub-color4
+
+h1 
+  color: #fff
+
+#title
+  font-size: 50px
+  color: $base-color
+
+#app
+  display: flex;
+  width: 100%
+
+#stage
+  width: 300px
+  height: 600px
+  min-width: 300px
+  min-height: 600px
+
+  .front-cover
+    position: absolute
+    width: 300px 
+    height: 600px
+    background-color: white
+    opacity: 0.6
+    z-index: 300
+
+  table
+    width: 100%
+    height: 100% 
+    box-sizing: border-box
+    border-collapse: collapse
+
+
+    td
+      color: white
+      background-color: $base-color
+
+      &[data-color='cyan']
+        background-color: #00bcd4
+      &[data-color='yellow']
+        background-color: #ffeb3b
+      &[data-color='purple']
+        background-color: #9c27B0
+      &[data-color='green']
+        background-color: #4caf50
+      &[data-color='red']
+        background-color: #f44336
+      &[data-color='blue']
+        background-color: #2196f3
+      &[data-color='orange']
+        background-color: #ff9800
+  
+#side-wrapper
+  display: block
+  flex-grow: 2
+  max-width: 600px
+  .box
+    padding: 20px
+    width: 200px
+    height: 170px
+    min-width: 200px
+    height: 170px
+    border-radius: 15%
+    background-color: $base-color
+    .title
+      color: white
+      font-size: 24px
+      line-height: 10px
+      text-align: justify
+      background-color: darken(red, 20%)
+      // background-color: $sub-color3
+    .content
+      margin-top: 20px
+      flex-grow: 2
+      color: white
+  .upper
+    height: 50%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    .now-point
+      .content
+        margin-top: 37px
+        font-size: 50px
+        text-align: center
+    .operate
+
+  .lower
+    height: 50%
+    display: flex
+    justify-content: space-around
+    align-items: center
+    .announce
+    .record
+
+table, th, td
+  border: 1px solid $sub-color1
+

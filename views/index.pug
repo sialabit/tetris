@@ -1,0 +1,56 @@
+doctype html
+html
+	head
+		title My Project
+		link(rel='stylesheet', href='/css/style.css')
+		script(
+			src='https://code.jquery.com/jquery-3.4.1.min.js'
+			integrity='sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo='
+			crossorigin='anonymous'
+		)
+		script(src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js')
+		script(type='text/javascript', src='js/patterns.js')
+		script(type='text/javascript', src='js/index.js')
+	body
+		#title Tetris
+		#app
+			#stage
+				.front-cover(v-if='isPausing')
+				table
+					- for (var r = 0; r < 20; r++)
+						tr
+							- for (var c = 0; c < 10; c++)
+								- var sign = r + ',' + c
+								td(
+									data-row=r
+									data-column=c
+									data-color='null'
+								)
+			#side-wrapper
+				.upper
+					.now-point.box
+						.title Current Score
+						.content {{ nowPoint }} pt
+					.operate.box
+						.title How to Operate
+						.content
+							| →: Arrow-Right or D or L
+							br
+							| ←: Arrow-Left or A or H
+							br
+							| ↓: Arrow-Down or S or J
+							br
+							| spin: Space
+							br
+							br
+							| pause: P
+				.lower
+					.announce.box
+						.title Announce
+						.content {{ announce }} 
+					.record.box
+						.title Record
+						.content
+							div(v-for='(v, i) in ranking') {{ i+1 }}. {{ v }} pt
+
+			
